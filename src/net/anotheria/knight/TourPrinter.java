@@ -2,11 +2,14 @@ package net.anotheria.knight;
 
 import java.util.List;
 
+/**
+ * Prints knight tour.
+ */
 public class TourPrinter {
 
 
     /**
-     * Prints knight tour
+     * Prints knight tour into console.
      *
      * @param tour list of cells(knight steps)
      */
