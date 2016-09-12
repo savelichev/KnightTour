@@ -1,22 +1,27 @@
 package net.anotheria.knight;
 
+/**
+ * Entity of knight coordinates.
+ */
 public class Cell implements Comparable {
-
-    public Cell() {
-    }
 
     public Cell(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    /* horizontal coordinate*/
+    /**
+     * horizontal coordinate
+     */
     private int x;
 
-    /* vertical coordinate*/
+    /**
+     * vertical coordinate
+     */
     private int y;
 
-    /* Available cells amount for current cell
+    /**
+     * Available cells amount for current cell
      * Initial size is 8 - all possible moves for knight
      */
     private int availableCells = 8;
@@ -25,16 +30,8 @@ public class Cell implements Comparable {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
     public int getY() {
         return y;
-    }
-
-    public void setY(int y) {
-        this.y = y;
     }
 
     public int getAvailableCells() {
@@ -71,7 +68,12 @@ public class Cell implements Comparable {
                 '}';
     }
 
-
+    /**
+     * Compares cells by they coordinates.
+     *
+     * @param o target to compare with.
+     * @return result of compare.
+     */
     @Override
     public int compareTo(Object o) {
         Cell anotherCell = (Cell) o;
